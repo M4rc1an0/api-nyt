@@ -2,10 +2,8 @@ import styled from "styled-components";
 
 export const ContentText = styled.div`
     display: flex;
-    justify-content: center;
     text-align: center;
     align-items: center;
-    margin: 5px;
 `
 
 export const H1 = styled.h1`
