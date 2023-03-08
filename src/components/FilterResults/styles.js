@@ -12,8 +12,19 @@ export const ContainerFilter = styled.div`
 
 export const ContentActions = styled.div`
     display: flex;
-    /* align-items: center; */
+    align-items: center;
     gap: 5px;
+`
+
+export const DisplayLayout = styled.div`
+`
+
+export const ButtonDisplay = styled.button`
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    margin: 0 5px;
+
 `
 
 export const Select = styled.select`

@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const ContentText = styled.div`
     display: flex;
-    text-align: center;
     align-items: center;
 `
 

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const Container = styled.div`
     display: flex;
@@ -13,19 +13,19 @@ export const ButtonIcon = styled.button`
     border: none;
 `
 
-export const ContentGender = styled.div`
+export const ContentBooks = styled.div`
     width: 100%;
     padding: 0 120px;
-`
-
-export const LinkRedirect = styled.a`
-    text-decoration: none;
 `
 
 export const ContentRow = styled.div`
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+`
+
+export const LinkRedirect = styled.a`
+    text-decoration: none;
 `
 
 export const ContainerPagination = styled.div`

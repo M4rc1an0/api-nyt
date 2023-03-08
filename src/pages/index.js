@@ -1,5 +1,5 @@
 import * as S from '../styles/styles'
-import { Header, Input, FilterResult, TextParagraph, ViewBook } from '../components'
+import { Header, Input, FilterResult, TextParagraph, ViewGender, ViewGenderRow } from '../components'
 import { Star } from '../../public/icons/star'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
@@ -8,6 +8,7 @@ export default function Home() {
   const [dataBooks, setDataBooks] = useState()
   const [itensPerPage, setItensPerPage] = useState(5)
   const [currentPage, setCurrentPage] = useState(0)
+  const [modeLayout, setModeLayout] = useState(false)
 
   const pages = dataBooks && Math.ceil(dataBooks?.results?.length / itensPerPage)
   const startIndex = currentPage * itensPerPage
@@ -23,6 +24,10 @@ export default function Home() {
       })
   }, [])
 
+  const searchGender = () => {
+    
+  }
+
   useEffect(() => {
     setCurrentPage(0)
   }, [itensPerPage])
@@ -30,19 +35,38 @@ export default function Home() {
   return (
     <S.Container>
       <Header>
-        <TextParagraph type='h1' text='Bloom Books' size={32} color='#fff' weight='700' />
+        <S.LinkRedirect href='/'><TextParagraph type='h1' text='Bloom Books' size={32} color='#fff' weight='700' /></S.LinkRedirect>
         <Input />
         <S.ButtonIcon>
           <Star />
         </S.ButtonIcon>
       </Header>
-      <FilterResult title='Gêneros' itensPerPage={itensPerPage} setItensPerPage={(e) => setItensPerPage(Number(e.target.value))} />
+      <FilterResult
+        title='Gêneros'
+        itensPerPage={itensPerPage}
+        setItensPerPage={(e) => setItensPerPage(Number(e.target.value))}
+        modeLayout={modeLayout}
+        setModeLayout={setModeLayout}
+      />
       <S.ContentGender>
-        {currentItens && currentItens?.map((book, index) => {
-          return (
-            <ViewBook data={book} key={index} />
-          )
-        })}
+        {!modeLayout &&
+          <>
+            {currentItens && currentItens?.map((gender, index) => {
+              return (
+                <ViewGender data={gender} key={index} />
+              )
+            })}
+          </>
+        }
+        {modeLayout &&
+          <S.ContentRow>
+            {currentItens && currentItens?.map((gender, index) => {
+              return (
+                <ViewGenderRow data={gender} key={index} />
+              )
+            })}
+          </S.ContentRow>
+        }
       </S.ContentGender>
       <S.ContainerPagination>
         {Array.from(Array(pages), (item, index) => {
@@ -55,6 +79,6 @@ export default function Home() {
           </S.ButtonPagination>
         })}
       </S.ContainerPagination>
-    </S.Container>
+    </S.Container >
   )
 }
