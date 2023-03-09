@@ -11,6 +11,7 @@ export const ContentInfo = styled.div`
 
 export const TitleAndAuthor = styled.div`
     display: flex;
+    align-items: center;
     gap: 5px;
 `
 
@@ -28,6 +29,10 @@ export const OtherInfo = styled.div`
 export const ImageBook = styled.img`
     width: 165px;
     padding: 0 30px;
+
+    @media (max-width: 1280px) {
+        width: 200px;
+    }
 `
 
 export const ButtonBuy = styled.button`
@@ -37,4 +42,10 @@ export const ButtonBuy = styled.button`
     margin: 10px 0;
     border-radius: 24px;
     border: none;
+`
+
+export const ButtonFavorite = styled.button`
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
 `

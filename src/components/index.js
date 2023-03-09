@@ -7,7 +7,10 @@ import ViewGender from "./ViewGender";
 import ViewGenderRow from "./ViewGenderRow";
 import ViewBook from "./ViewBook";
 import ViewBookRow from "./ViewBookRow"
+import ViewFavoriteBook from "./ViewFavoriteBook";
 import Pagination from "./Pagination";
+import Modal from "./Modal";
+import SidebarFavorite from "./SidebarFavorite";
 
 export {
     Header,
@@ -19,5 +22,8 @@ export {
     ViewGenderRow,
     ViewBook,
     ViewBookRow,
-    Pagination
+    ViewFavoriteBook,
+    Pagination,
+    Modal,
+    SidebarFavorite
 }

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContainerViewBook = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 15px 0;
+    margin: 15px;
     width: 200px;
 `
 
@@ -19,8 +19,21 @@ export const ContentImage = styled.div`
 `
 
 export const TitleAndAuthor = styled.div`
-    /* display: flex; */
     gap: 5px;
+`
+
+export const ContentBy = styled.div`
+    display: flex;
+
+    div {
+        p {
+            padding-right: 5px;
+            white-space: nowrap;
+            width: 195px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
 `
 
 export const Description = styled.div`
@@ -47,4 +60,10 @@ export const ButtonBuy = styled.button`
     margin: 10px 0;
     border-radius: 24px;
     border: none;
+`
+
+export const ButtonFavorite = styled.button`
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
 `

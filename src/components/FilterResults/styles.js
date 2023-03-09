@@ -5,15 +5,22 @@ export const ContainerFilter = styled.div`
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 48px;
     padding: 10px 120px;
     background-color: #F2F3F8;
+
+    @media (max-width: 992px) {
+        flex-direction: column;
+    }
 `
 
 export const ContentActions = styled.div`
     display: flex;
     align-items: center;
     gap: 5px;
+
+    @media (max-width: 992px) {
+        margin-top: 10px;
+    }
 `
 
 export const DisplayLayout = styled.div`

@@ -5,7 +5,12 @@ export const ContainerHeader = styled.div`
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 10px 120px;
-    height: 60px;
+    padding: 0 120px;
     background-color: #5062F0;
+    z-index: 1000;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+
 `
