@@ -12,7 +12,11 @@ export const ContentPage = styled.div`
     flex-direction: column;
     position: relative;
     height: 100%;
+    margin-top: 50px;
 
+    @media (max-width: 768px) {
+        margin-top: 110px;
+    }
 `
 
 export const ContentTitleFavorite = styled.div`
@@ -34,7 +38,6 @@ export const ContentTitleFavorite = styled.div`
     @media (max-width: 768px) {
         justify-content: space-between;
         width: 100%;
-        padding: 10px 0;
     }
 `
 
@@ -77,20 +80,31 @@ export const ContentInput = styled.div`
 export const ButtonIcon = styled.button`
     cursor: pointer;
     width: 64px;
-    height: 100%;
+    height: 53px;
     background-color: ${(props) => props.active ? '#0B1A8E' : 'transparent'};
     border: none;
     outline: none;
 
     @media (max-width: 768px) {
-        border-radius: 20px;
-        width: 40px;
+        height: 52px;
+
     }
 `
 
 export const ContentGender = styled.div`
     width: 100%;
     padding: 0 120px;
+    
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+`
+
+export const ContentListage = styled.div`
+
 `
 
 export const LinkRedirect = styled.a`
@@ -106,8 +120,9 @@ export const ContentRow = styled.div`
 export const ContainerPagination = styled.div`
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
-    padding: 20px 0;
+    padding: 20px 10px;
     gap: 5px;
 `
 

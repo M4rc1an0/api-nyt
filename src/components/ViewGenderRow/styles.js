@@ -6,6 +6,11 @@ export const ContainerViewBook = styled.div`
     justify-content: space-between;
     width: 200px;
     padding: 40px 0;
+
+    @media (max-width: 768px) {
+        width: 142px;
+        padding: 10px 0;
+    }
 `
 
 export const ContentPrimary = styled.div`
@@ -38,5 +43,12 @@ export const ContentPublications = styled.div`
 export const Publication = styled.div`
     display: flex;
     align-items: flex-end;
+    flex-wrap: wrap;
     gap: 3px;
+
+    p {
+        :nth-child(1) {
+            white-space: nowrap;
+        }
+    }
 `

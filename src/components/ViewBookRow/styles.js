@@ -5,6 +5,10 @@ export const ContainerViewBook = styled.div`
     flex-direction: column;
     margin: 15px;
     width: 200px;
+
+    @media (max-width: 768px) {
+        width: 40%;
+    }
 `
 
 export const ContentInfo = styled.div`
@@ -34,6 +38,18 @@ export const ContentBy = styled.div`
             text-overflow: ellipsis;
         }
     }
+
+    @media (max-width: 768px) {
+        div {
+            p {
+                padding-right: 5px;
+                white-space: nowrap;
+                width: 100px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
 `
 
 export const Description = styled.div`
@@ -60,6 +76,15 @@ export const ButtonBuy = styled.button`
     margin: 10px 0;
     border-radius: 24px;
     border: none;
+    
+    @media (max-width: 768px) {
+        display: flex;
+        justify-content: center;
+        
+        p {
+            font-size: 12px;
+        }
+    }
 `
 
 export const ButtonFavorite = styled.button`

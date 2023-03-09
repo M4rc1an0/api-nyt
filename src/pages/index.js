@@ -30,13 +30,9 @@ export default function Home() {
       })
   }, [])
 
-  const searchList = (e) => {
-    router.push(`/books?gender=${searchCategory}`)
-  }
-
   useEffect(() => {
     setCurrentPage(0)
-  }, [itensPerPage])
+  }, [itensPerPage, modeLayout])
 
   return (
     <S.Container>
@@ -71,24 +67,26 @@ export default function Home() {
           setModeLayout={setModeLayout}
         />
         <S.ContentGender>
-          {!modeLayout &&
-            <>
-              {currentItens && currentItens?.map((gender, index) => {
-                return (
-                  <ViewGender data={gender} key={index} />
-                )
-              })}
-            </>
-          }
-          {modeLayout &&
-            <S.ContentRow>
-              {currentItens && currentItens?.map((gender, index) => {
-                return (
-                  <ViewGenderRow data={gender} key={index} />
-                )
-              })}
-            </S.ContentRow>
-          }
+          <S.ContentListage>
+            {!modeLayout &&
+              <>
+                {currentItens && currentItens?.map((gender, index) => {
+                  return (
+                    <ViewGender data={gender} key={index} />
+                  )
+                })}
+              </>
+            }
+            {modeLayout &&
+              <S.ContentRow>
+                {currentItens && currentItens?.map((gender, index) => {
+                  return (
+                    <ViewGenderRow data={gender} key={index} />
+                  )
+                })}
+              </S.ContentRow>
+            }
+          </S.ContentListage>
         </S.ContentGender>
         <S.ContainerPagination>
           {Array.from(Array(pages), (item, index) => {

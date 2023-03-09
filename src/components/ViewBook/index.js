@@ -6,7 +6,7 @@ import TextParagraph from '../TextParagraph'
 import { StarFilled } from '../../../public/icons/starFilled'
 
 const ViewBook = ({ data }) => {
-    const { favoriteBooks, setFavoriteBooks} = useContext(GlobalContext)
+    const { favoriteBooks, setFavoriteBooks } = useContext(GlobalContext)
 
     const addBookFavorite = () => {
         setFavoriteBooks([...favoriteBooks, data])
@@ -24,10 +24,12 @@ const ViewBook = ({ data }) => {
             <S.ContentInfo>
                 <S.TitleAndAuthor>
                     <TextParagraph type='h3' text={data.title} size='16px' color='#0E1337' weight='700' />
-                    <TextParagraph type='p' text={data.contributor} size='14px' color='#454A67' weight='400' />
-                    <S.ButtonFavorite onClick={() => isFavorite ? removeBookFavorite() : addBookFavorite()}>
-                        <StarFilled width='16px' color={isFavorite && "#5062F0"} />
-                    </S.ButtonFavorite>
+                    <S.ContentByButton>
+                        <TextParagraph type='p' text={data.contributor} size='14px' color='#454A67' weight='400' />
+                        <S.ButtonFavorite onClick={() => isFavorite ? removeBookFavorite() : addBookFavorite()}>
+                            <StarFilled width='16px' color={isFavorite && "#5062F0"} />
+                        </S.ButtonFavorite>
+                    </S.ContentByButton>
                 </S.TitleAndAuthor>
                 <S.Description>
                     <TextParagraph type='p' text={data.description} size='14px' color='#0E1337' weight='bold' />

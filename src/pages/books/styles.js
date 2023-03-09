@@ -12,6 +12,11 @@ export const ContentPage = styled.div`
     flex-direction: column;
     min-height: 110vh;
     height: 100%;
+    margin-top: 50px;
+
+    @media (max-width: 768px) {
+        margin-top: 110px;
+    }
 `
 
 export const ButtonIcon = styled.button`
@@ -23,14 +28,17 @@ export const ButtonIcon = styled.button`
     outline: none;
 
     @media (max-width: 768px) {
-        border-radius: 20px;
-        width: 40px;
+        height: 52px;
     }
 `
 
 export const ContentBooks = styled.div`
     width: 100%;
     padding: 0 120px;
+    
+    @media (max-width: 768px) {
+        padding: 10px;
+    }
 `
 
 export const ContentRow = styled.div`
@@ -67,8 +75,8 @@ export const ContentTitleFavorite = styled.div`
 
     @media (max-width: 768px) {
         justify-content: space-between;
+        align-items: center;
         width: 100%;
-        padding: 10px 0;
     }
 `
 

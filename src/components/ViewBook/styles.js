@@ -11,7 +11,15 @@ export const ContentInfo = styled.div`
 
 export const TitleAndAuthor = styled.div`
     display: flex;
-    align-items: center;
+    gap: 5px;
+
+    @media (max-width: 992px) {
+        flex-direction: column;
+    }
+`
+
+export const ContentByButton = styled.div`
+    display: flex;
     gap: 5px;
 `
 
@@ -32,6 +40,11 @@ export const ImageBook = styled.img`
 
     @media (max-width: 1280px) {
         width: 200px;
+    }
+
+    @media (max-width: 600px) {
+        width: 130px;
+        height: 107px;
     }
 `
 

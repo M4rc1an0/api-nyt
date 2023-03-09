@@ -39,6 +39,10 @@ export default function Books() {
         }
     }, [gender])
 
+    useEffect(() => {
+        setCurrentPage(0)
+      }, [itensPerPage, modeLayout])
+
     return (
         <S.Container>
             <Header>

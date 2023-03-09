@@ -11,6 +11,10 @@ export const ContainerFilter = styled.div`
     @media (max-width: 992px) {
         flex-direction: column;
     }
+    
+    @media (max-width: 768px) {
+        padding: 10px;
+    }
 `
 
 export const ContentActions = styled.div`
